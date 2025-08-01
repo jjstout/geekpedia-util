@@ -13,7 +13,7 @@ dependencies = [
     ]
 
 [project.scripts]
-geekpedia-util = "geekpedia_util.cli:app"
+bede = "geekpedia_util.cli:app"
 
 [build-system]
 requires = ["hatchling"]
