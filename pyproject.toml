@@ -1,6 +1,6 @@
 [project]
 name = "geekpedia-util"
-version = "0.0.0"
+version = "0.1.0"
 description = "Utility for working with Geekpedia"
 readme = "README.md"
 authors = [
@@ -8,12 +8,19 @@ authors = [
 ]
 requires-python = ">=3.13"
 dependencies = [
+    "httpx>=0.28.1",
     "loguru>=0.7.3",
+    "lxml-html-clean>=0.4.2",
+    "nanoid>=2.0.0",
+    "newspaper3k>=0.2.8",
+    "nltk>=3.9.1",
+    "pyyaml>=6.0.2",
+    "readability-lxml>=0.8.4.1",
     "typer>=0.16.0",
-    ]
+]
 
 [project.scripts]
-geekpedia-util = "geekpedia_util.cli:app"
+bede = "geekpedia_util.cli:app"
 
 [build-system]
 requires = ["hatchling"]
@@ -39,7 +46,7 @@ fix = true  # Automatically fix issues
 select = ["E", "F", "I"]  # Enable specific rules (E: pycodestyle, F: Pyflakes, I: isort)
 
 [tool.bumpversion]
-current_version = "0.0.0"
+current_version = "0.1.0"
 parse = "(?P<major>\\d+)\\.(?P<minor>\\d+)\\.(?P<patch>\\d+)"
 serialize = ["{major}.{minor}.{patch}"]
 search = "{current_version}"
